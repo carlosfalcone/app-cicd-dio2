@@ -24,5 +24,14 @@ jobs:
         DOCKER_TLS_CERTDIR: "/certs"
       run: |
         ls
-        docker build -t carlosfalcone/app-cicd-dio:2.0 ./app/.
-        docker push carlosfalcone/app-cicd-dio:2.0
+        docker build -t carlosfalcone/app-cicd-dio:1.0 ./app/.
+        docker push carlosfalcone/app-cicd-dio:1.0
+
+deploy_gcp:
+  
+  stage: deploy_gcp
+  before_script:
+    - chmod 400 $SSH_KEY
+  script: 
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY gcp@SSH_SERVER "sudo rm -Rf ./app-cicd-dio2/ && sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git && cd app-cicd-dio2 && sudo chmod +x ./script.sh && sudo ./script.sh "
+

@@ -38,14 +38,6 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_KEY }}
 
-    - name: Debug SSH Key
-      run: |
-        pwd
-        ls
-
-    - name: Set permissions on SSH key
-      run: chmod 400 ${{ secrets.SSH_KEY }}
-
     - name: Deploy to GCP
       run: |
-        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} gcp@YOUR_SSH_SERVER "sudo rm -Rf ./app-cicd-dio2/ && sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git && cd app-cicd-dio2 && sudo chmod +x ./script.sh && ./script.sh "
+        "sudo rm -Rf ./app-cicd-dio2/ && sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git && cd app-cicd-dio2 && sudo chmod +x ./script.sh && ./script.sh "

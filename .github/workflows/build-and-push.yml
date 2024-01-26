@@ -32,6 +32,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        path: /home/gcp/app-cicd-dio2
 
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.5.3
@@ -49,6 +51,7 @@ jobs:
       run: |
         echo "Current directory: $(pwd)"
         echo "Files in the current directory: $(ls -la)"
+        cd /home/gcp/app-cicd-dio2
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git /home/gcp/app-cicd-dio2
     
 

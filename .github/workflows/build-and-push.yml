@@ -43,4 +43,4 @@ jobs:
         sudo rm -Rf ./app-cicd-dio2/
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
         cd app-cicd-dio2
-        ls -la   # Adiciona este comando para listar os arquivos no diretório
+        

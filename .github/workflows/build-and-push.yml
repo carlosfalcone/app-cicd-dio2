@@ -40,28 +40,7 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_KEY }}
         post-entrypoint: |
           chmod 400 $SSH_KEY
-
-    - name: Debug GitHub Actions
-      run: |
-        echo "GitHub Actions workspace: $GITHUB_WORKSPACE"
-        echo "Current directory: $(pwd)"
-        echo "Contents of the current directory: $(ls -la)"
-        echo "Contents of the GitHub Actions workspace: $(ls -la $GITHUB_WORKSPACE)"
-        echo "Contents of /home/gcp: $(ls -la /home/gcp)"
-
-    - name: Create /home/gcp directory
-      run: mkdir -p $GITHUB_WORKSPACE/home/gcp
-
-    - name: Debug GitHub Actions
-      run: |
-        echo "GitHub Actions workspace: $GITHUB_WORKSPACE"
-        echo "Current directory: $(pwd)"
-        echo "Contents of /home/gcp: $(ls -la /home/gcp)"
     
     - name: Deploy to GCP
       run: |
-        echo "Current directory: $(pwd)"
-        ls $GITHUB_WORKSPACE/home/gcp
-        sudo chmod +x $GITHUB_WORKSPACE/home/gcp/script-bastion.sh
-        $GITHUB_WORKSPACE/home/gcp/script-bastion.sh
-
+        echo "workflow funcionando!"

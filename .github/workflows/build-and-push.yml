@@ -39,8 +39,9 @@ jobs:
 
     - name: Test SSH Connection
       run: |
+        echo "${{ secrets.SSH_KEY }}" > key.pem
         chmod 400 ${{ secrets.SSH_KEY }}
-        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} -J gcp@${{ secrets.SSH_SERVER }}
+        ssh -o StrictHostKeyChecking=no -T -i key.pem gcp@${{ secrets.SSH_SERVER }}
   
     - name: Deploy to GCP
       run: |

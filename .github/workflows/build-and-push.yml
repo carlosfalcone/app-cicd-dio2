@@ -49,12 +49,14 @@ jobs:
         echo "Contents of the current directory: $(ls -la)"
         echo "Contents of the GitHub Actions workspace: $(ls -la $GITHUB_WORKSPACE)"
 
+    
     - name: Deploy to GCP
       run: |
         echo "Current directory: $(pwd)"
         echo "Files in the current directory: $(ls -la)"
-        cd /home/gcp/app-cicd-dio2
+        cd /github/workspace/app-cicd-dio2  # Ajuste o caminho aqui
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git .
+
     
 
 

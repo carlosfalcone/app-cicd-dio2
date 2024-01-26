@@ -33,9 +33,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        path: '/home/gcp/app-cicd-dio2'
-        ref: main
 
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.5.3

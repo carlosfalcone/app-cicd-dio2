@@ -38,6 +38,14 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_KEY }}
 
+    - name: Debug GitHub Actions
+      run: |
+        echo "GitHub Actions workspace: $GITHUB_WORKSPACE"
+        echo "Current directory: $(pwd)"
+        echo "Contents of the current directory: $(ls -la)"
+        echo "Contents of the GitHub Actions workspace: $(ls -la $GITHUB_WORKSPACE)"
+
+
     - name: Deploy to GCP
       run: |
         echo "Current directory: $(pwd)"

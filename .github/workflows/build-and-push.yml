@@ -41,6 +41,8 @@ jobs:
 
     - name: Debug SSH Key
       run: |
+        pwd 
+        ls
         ls -la $HOME/.ssh
         cat $HOME/.ssh/id_rsa
 

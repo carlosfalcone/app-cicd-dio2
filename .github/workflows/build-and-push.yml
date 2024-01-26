@@ -49,10 +49,11 @@ jobs:
     
     - name: Deploy to GCP
       run: |
-        echo "Workflow rodando..."
-        cd /home/gcp
-        sudo chmod +x ./script.sh
-        ./script-bastion.sh
+        echo "Current directory: $(pwd)"
+        ls /home/gcp
+        sudo chmod +x /home/gcp/script-bastion.sh
+        ./home/gcp/script-bastion.sh
+
 
 
         

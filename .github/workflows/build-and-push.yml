@@ -40,7 +40,6 @@ jobs:
 
     - name: Deploy to GCP
       run: |
-        sudo cd /
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
 
 

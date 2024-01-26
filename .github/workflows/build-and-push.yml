@@ -48,9 +48,7 @@ jobs:
         echo "workflow funcionando!"
         sudo rm -Rf ./app-cicd-dio2/
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
-        cd app-cicd-dio2
-        sudo chmod +x ./script.sh
-        ./script.sh
+
 
 
 # - name: Set up SSH
@@ -59,3 +57,7 @@ jobs:
 #         ssh-private-key: ${{ secrets.SSH_KEY }}
 #         post-entrypoint: |
 #           chmod 400 $SSH_KEY
+
+# cd app-cicd-dio2
+# sudo chmod +x ./script.sh
+# ./script.sh

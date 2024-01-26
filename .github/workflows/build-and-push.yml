@@ -42,13 +42,12 @@ jobs:
         echo -n "${{ secrets.SSH_KEY }}" > key.pem
         chmod 400 key.pem
         ssh -o StrictHostKeyChecking=no -T -i key.pem gcp@${{ secrets.SSH_SERVER }}
-  
-    - name: Deploy to GCP
-      run: |
         echo "workflow funcionando!"
         sudo rm -Rf ./app-cicd-dio2/
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
         echo "clone finalizado"
+
+
 
 
 

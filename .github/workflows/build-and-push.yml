@@ -40,7 +40,11 @@ jobs:
 
     - name: Deploy to GCP
       run: |
-        sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
+        - name: Debug
+        echo "Current directory: $(pwd)"
+        echo "Files in the current directory: $(ls -la)"
+    
+
 
 
 

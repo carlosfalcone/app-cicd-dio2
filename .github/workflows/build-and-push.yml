@@ -52,10 +52,10 @@ jobs:
     
     - name: Deploy to GCP
       run: |
-        echo "Current directory: $(pwd)"
-        echo "Files in the current directory: $(ls -la)"
-        cd /github/workspace/app-cicd-dio2  # Ajuste o caminho aqui
-        sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git .
+        cd /home/gcp 
+        nano teste2.txt
+
+        
 
     
 

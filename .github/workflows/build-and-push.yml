@@ -38,15 +38,10 @@ jobs:
       uses: actions/checkout@v2
 
     
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.SSH_KEY }}
-        post-entrypoint: |
-          chmod 400 $SSH_KEY
-          gcp@${{ secrets.SSH_SERVER }}
+    - name: Test SSH Connection
+      run: |
+        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} gcp@${{ secrets.SSH_SERVER }} "echo 'SSH connection successful'"
   
-
     - name: Deploy to GCP
       run: |
         echo "workflow funcionando!"

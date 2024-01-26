@@ -48,6 +48,10 @@ jobs:
         echo "clone finalizado"
         echo "Current working directory: $(pwd)"
         ls -la ./app-cicd-dio2/
+        cd /home/gcp
+        sudo chmod +x ./teste.sh
+        ./teste.sh
+
 
 
 

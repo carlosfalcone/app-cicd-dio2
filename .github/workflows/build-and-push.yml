@@ -38,10 +38,15 @@ jobs:
       uses: actions/checkout@v2
 
     
+    # - name: Test SSH Connection
+    #   run: |
+    #     ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} gcp@${{ secrets.SSH_SERVER }} "echo 'SSH connection successful'"
+  
     - name: Test SSH Connection
       run: |
-        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} gcp@${{ secrets.SSH_SERVER }} "echo 'SSH connection successful'"
-  
+        ssh -o StrictHostKeyChecking=no -T gcp@${{ secrets.SSH_SERVER }}
+
+
     - name: Deploy to GCP
       run: |
         echo "workflow funcionando!"

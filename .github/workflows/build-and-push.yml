@@ -37,21 +37,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - uses: actions/checkout@v3
-    - name: Setup key
-      uses: ./
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
       with:
-       ssh-private-key: |
-         ${{ secrets.SSH_KEY }}
+        ssh-private-key: ${{ secrets.SSH_KEY }}
+        post-entrypoint: |
+          chmod 400 $SSH_KEY
 
     - name: Deploy to GCP
       run: |
         echo "workflow funcionando!"
 
 
-    # - name: Set up SSH
-    #   uses: webfactory/ssh-agent@v0.5.3
-    #   with:
-    #     ssh-private-key: ${{ secrets.SSH_KEY }}
-    #     post-entrypoint: |
-    #       chmod 400 $SSH_KEY

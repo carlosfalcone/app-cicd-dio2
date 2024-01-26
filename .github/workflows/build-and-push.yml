@@ -49,7 +49,7 @@ jobs:
     
     - name: Deploy to GCP
       run: |
-        sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
+        echo "Workflow rodando..."
 
 
         

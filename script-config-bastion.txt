@@ -1,0 +1,20 @@
+Para copiar dentro da janela do prompt, apenas selecione o texto para copiar e cole clicando no botão direito do mouse
+
+gcloud config set account carloseduardo.falcone@gmail.com
+
+gcloud init
+
+Nao precisa selecionar 1-Re-initialize this configurantion ou 2-Create a new configuration
+ctrl c para interromper. 
+
+gcloud auth login.
+Seguir instruçoes
+
+sudo apt-get install kubectl
+
+sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
+
+Vá para a instancia do cluster do kubernetes, clique nos tres pontinhos verticais, escolha conectar, copie a linha de comando e cole no prompt do bastion
+
+sudo apt-get install git
+

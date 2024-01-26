@@ -39,7 +39,7 @@ jobs:
 
     - name: Test SSH Connection
       run: |
-        echo "${{ secrets.SSH_KEY }}" > key.pem
+        echo -n "${{ secrets.SSH_KEY }}" > key.pem
         chmod 400 ${{ secrets.SSH_KEY }}
         ssh -o StrictHostKeyChecking=no -T -i key.pem gcp@${{ secrets.SSH_SERVER }}
   

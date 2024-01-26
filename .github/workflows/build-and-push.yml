@@ -40,7 +40,7 @@ jobs:
     
     - name: Test SSH Connection
       run: |
-        ssh -o StrictHostKeyChecking=no -i gcp@${{ secrets.SSH_SERVER }} ${{ secrets.SSH_KEY }} 
+        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} -J gcp@${{ secrets.SSH_SERVER }}
   
     # - name: Test SSH Connection
     #   run: |

@@ -40,7 +40,6 @@ jobs:
 
     - name: Deploy to GCP
       run: |
-        - name: Debug
         echo "Current directory: $(pwd)"
         echo "Files in the current directory: $(ls -la)"
     

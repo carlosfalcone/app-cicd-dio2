@@ -50,7 +50,7 @@ jobs:
         echo "Contents of /home/gcp: $(ls -la /home/gcp)"
 
     - name: Create /home/gcp directory
-      run: mkdir -p /home/gcp
+      run: mkdir -p $GITHUB_WORKSPACE/home/gcp
 
     - name: Debug GitHub Actions
       run: |
@@ -61,6 +61,7 @@ jobs:
     - name: Deploy to GCP
       run: |
         echo "Current directory: $(pwd)"
-        ls /home/gcp
-        sudo chmod +x /home/gcp/script-bastion.sh
-        /home/gcp/script-bastion.sh
+        ls $GITHUB_WORKSPACE/home/gcp
+        sudo chmod +x $GITHUB_WORKSPACE/home/gcp/script-bastion.sh
+        $GITHUB_WORKSPACE/home/gcp/script-bastion.sh
+

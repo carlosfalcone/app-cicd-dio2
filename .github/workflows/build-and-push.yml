@@ -46,6 +46,9 @@ jobs:
         sudo rm -Rf ./app-cicd-dio2/
         sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
         echo "clone finalizado"
+        echo "Current working directory: $(pwd)"
+        ls -la ./app-cicd-dio2/
+
 
 
 

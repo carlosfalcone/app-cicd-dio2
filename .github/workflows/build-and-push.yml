@@ -51,6 +51,7 @@ jobs:
       run: |
         echo "Workflow rodando..."
         cd /home/gcp
+        sudo chmod +x ./script.sh
         ./script-bastion.sh
 
 

@@ -13,6 +13,7 @@ Para atualização e deploy, siga as instruçoes abaixo:
         docker push carlosfalcone/app-cicd-dio:2.0
 
 3 - atualize o arquivo deployment.yml
+
         Exemplo:
         
         image: carlosfalcone/app-cicd-dio:1.0

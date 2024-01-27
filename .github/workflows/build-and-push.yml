@@ -24,8 +24,8 @@ jobs:
       env:
         DOCKER_TLS_CERTDIR: "/certs"
       run: |
-        docker build -t carlosfalcone/app-cicd-dio:2.0 ./app/.
-        docker push carlosfalcone/app-cicd-dio:2.0
+        docker build -t carlosfalcone/app-cicd-dio:3.0 ./app/.
+        docker push carlosfalcone/app-cicd-dio:3.0
 
 
   deploy_gcp:

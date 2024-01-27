@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: carlosfalcone/app-cicd-dio:2.0
+        image: carlosfalcone/app-cicd-dio:3.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80

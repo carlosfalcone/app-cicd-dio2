@@ -19,7 +19,7 @@ jobs:
           chmod 400 key.pem
           ssh -o StrictHostKeyChecking=no -T -i key.pem ubuntu@${{ secrets.SSH_SERVER }}
           sudo rm -Rf ./app-cicd-dio2/
-          sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
+          git clone https://github.com/carlosfalcone/app-cicd-dio2.git
           echo "clone finalizado"
           echo "Current working directory: $(pwd)"
 

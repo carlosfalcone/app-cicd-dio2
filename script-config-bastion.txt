@@ -14,7 +14,9 @@ sudo apt-get install kubectl
 
 sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
 
+sudo apt-get install git
+
 Vá para a instancia do cluster do kubernetes, clique nos tres pontinhos verticais, escolha conectar, copie a linha de comando e cole no prompt do bastion
 
-sudo apt-get install git
+
 

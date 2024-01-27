@@ -1,0 +1,15 @@
+Para atualização e deploy, siga as instruçoes abaixo:
+
+1 - atualize o arquivo index.html
+
+2 - atualize o nome da imagem na especificaçao dentro do arquivo build-and-push.yml:
+
+        Exemplo:
+
+        docker build -t carlosfalcone/app-cicd-dio:1.0 ./app/.
+        docker push carlosfalcone/app-cicd-dio:1.0
+
+        docker build -t carlosfalcone/app-cicd-dio:2.0 ./app/.
+        docker push carlosfalcone/app-cicd-dio:2.0
+
+3 - Faça o procedimento para atualizar o repositorio remoto do github e assim ele irá executar o Actions, que irá atualizar os arquivos dentro do docker hub e cluster kubernetes

@@ -15,7 +15,7 @@ jobs:
 
       - name: Test SSH Connection and Run Code
         run: |
-          echo -n "${{ secrets.SSH_KEY }}" > key.pem && chmod 400 key.pem && ssh -o StrictHostKeyChecking=no -T -i key.pem ubuntu@${{ secrets.SSH_SERVER }} && sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git
+          echo -n "${{ secrets.SSH_KEY }}" > key.pem && chmod 400 key.pem && ssh -o StrictHostKeyChecking=no -T -i key.pem ubuntu@${{ secrets.SSH_SERVER }} && "sudo git clone https://github.com/carlosfalcone/app-cicd-dio2.git"
           
     
       # - name: Test SSH Connection and Run Code
